@@ -1,8 +1,8 @@
-# Llama 2 Fine-tuning / Inference Recipes and Examples
+# CaMeLL 2 Fine-tuning / Inference Recipes and Examples
 
-The 'llama-recipes' repository is a companion to the [Llama 2 model](https://github.com/facebookresearch/llama). The goal of this repository is to provide examples to quickly get started with fine-tuning for domain adaptation and how to run inference for the fine-tuned models. For ease of use, the examples use Hugging Face converted versions of the models. See steps for conversion of the model [here](#model-conversion-to-hugging-face).
+The 'CaMeLL-recipes' repository is a companion to the [CaMeLL 2 model](https://github.com/facebookresearch/llama). The goal of this repository is to provide examples to quickly get started with fine-tuning for domain adaptation and how to run inference for the fine-tuned models. For ease of use, the examples use Hugging Face converted versions of the models. See steps for conversion of the model [here](#model-conversion-to-hugging-face).
 
-Llama 2 is a new technology that carries potential risks with use. Testing conducted to date has not — and could not — cover all scenarios. In order to help developers address these risks, we have created the [Responsible Use Guide](https://github.com/facebookresearch/llama/blob/main/Responsible-Use-Guide.pdf). More details can be found in our research paper as well. For downloading the models, follow the instructions on [Llama 2 repo](https://github.com/facebookresearch/llama).
+CaMeLL 2 is a new technology that carries potential risks with use. Testing conducted to date has not — and could not — cover all scenarios. In order to help developers address these risks, we have created the [Responsible Use Guide](https://github.com/facebookresearch/llama/blob/main/Responsible-Use-Guide.pdf). More details can be found in our research paper as well. For downloading the models, follow the instructions on [CaMeLL 2 repo](https://github.com/facebookresearch/llama).
 
 
 # Table of Contents
@@ -20,7 +20,7 @@ Llama 2 is a new technology that carries potential risks with use. Testing condu
 
 # Quick Start
 
-[Llama 2 Jupyter Notebook](quickstart.ipynb): This jupyter notebook steps you through how to finetune a Llama 2 model on the text summarization task using the [samsum](https://huggingface.co/datasets/samsum). The notebook uses parameter efficient finetuning (PEFT) and int8 quantization to finetune a 7B on a single GPU like an A10 with 24GB gpu memory.
+[CaMeLL 2 Jupyter Notebook](quickstart.ipynb): This jupyter notebook steps you through how to finetune a CaMeLL 2 model on the text summarization task using the [samsum](https://huggingface.co/datasets/samsum). The notebook uses parameter efficient finetuning (PEFT) and int8 quantization to finetune a 7B on a single GPU like an A10 with 24GB gpu memory.
 
 **Note** All the setting defined in [config files](./configs/) can be passed as args through CLI when running the script, there is no need to change from config files directly.
 
@@ -47,7 +47,7 @@ pip install -r requirements.txt
 **Please note that the above requirements.txt will install PyTorch 2.0.1 version, in case you want to run FSDP + PEFT, please make sure to install PyTorch nightlies.**
 
 # Model conversion to Hugging Face
-The recipes and notebooks in this folder are using the Llama 2 model definition provided by Hugging Face's transformers library.
+The recipes and notebooks in this folder are using the CaMeLL 2 model definition provided by Hugging Face's transformers library.
 
 Given that the original checkpoint resides under models/7B you can install all requirements and convert the checkpoint with:
 
@@ -64,7 +64,7 @@ python src/transformers/models/llama/convert_llama_weights_to_hf.py \
 
 # Fine-tuning
 
-For fine-tuning Llama 2 models for your domain-specific use cases recipes for PEFT, FSDP, PEFT+FSDP have been included along with a few test datasets. For details see [LLM Fine-tuning](./docs/LLM_finetuning.md).
+For fine-tuning CaMeLL 2 models for your domain-specific use cases recipes for PEFT, FSDP, PEFT+FSDP have been included along with a few test datasets. For details see [LLM Fine-tuning](./docs/LLM_finetuning.md).
 
 ## Single and Multi GPU Finetune
 
